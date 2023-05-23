@@ -1,0 +1,30 @@
+const array= [33,44,2,55,1,66];
+
+const secondLargest = () => {
+    let temp=0;
+    
+    for (let i=0; i<array.length; i++){
+        for(let j=i+1; j<array.length; j++){
+             if(array[i]> array[j]){
+            temp=array[i];
+            
+            array[i]= array[j];
+            
+            array[j]=temp;
+        }
+        }
+    }console.log(array)
+    let largest = 0;
+    let secondLargest = 0;
+    for(let i=0; i<array.length; i++){
+        if(array[i] < array[i+1]){
+            largest = array[i+1];
+            secondLargest = array[i]
+        }
+    }
+   
+    console.log("Second Largest number",secondLargest)
+        
+}
+
+secondLargest()
